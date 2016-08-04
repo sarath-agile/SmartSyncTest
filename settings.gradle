@@ -1,0 +1,4 @@
+include ':app'
+include 'libs:SalesforceSDK'
+include 'libs:SmartStore'
+include 'libs:SmartSync'

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/manager/sarath_user/SmartSyncTest/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/ic_fp_40px.png",
+        "source": "/home/manager/sarath_user/SmartSyncTest/libs/SalesforceSDK/build/intermediates/bundles/debug/res/drawable-xxhdpi-v4/ic_fp_40px.png"
+    },
+    {
+        "merged": "/home/manager/sarath_user/SmartSyncTest/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/sf__icon.png",
+        "source": "/home/manager/sarath_user/SmartSyncTest/libs/SalesforceSDK/build/intermediates/bundles/debug/res/drawable-xxhdpi-v4/sf__icon.png"
+    }
+]

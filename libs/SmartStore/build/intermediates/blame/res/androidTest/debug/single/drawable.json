@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/manager/sarath_user/SmartSyncTest/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable/sf__toolbar_background.xml",
+        "source": "/home/manager/sarath_user/SmartSyncTest/libs/SmartStore/build/intermediates/exploded-aar/SmartSyncTest.libs/SalesforceSDK/unspecified/res/drawable/sf__toolbar_background.xml"
+    },
+    {
+        "merged": "/home/manager/sarath_user/SmartSyncTest/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable/sf__header_bg.png",
+        "source": "/home/manager/sarath_user/SmartSyncTest/libs/SmartStore/build/intermediates/exploded-aar/SmartSyncTest.libs/SalesforceSDK/unspecified/res/drawable/sf__header_bg.png"
+    },
+    {
+        "merged": "/home/manager/sarath_user/SmartSyncTest/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable/sf__progress_spinner.xml",
+        "source": "/home/manager/sarath_user/SmartSyncTest/libs/SmartStore/build/intermediates/exploded-aar/SmartSyncTest.libs/SalesforceSDK/unspecified/res/drawable/sf__progress_spinner.xml"
+    }
+]

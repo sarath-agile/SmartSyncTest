@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/home/manager/sarath_user/SmartSyncTest/libs/SalesforceSDK/assets"/><source path="/home/manager/sarath_user/SmartSyncTest/libs/SalesforceSDK/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/home/manager/sarath_user/SmartSyncTest/libs/SalesforceSDK/src/debug/assets"/></dataSet></merger>

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/manager/sarath_user/SmartSyncTest/libs/SmartSync/build/intermediates/res/merged/release/xml/app_restrictions.xml",
+        "source": "/home/manager/sarath_user/SmartSyncTest/libs/SmartSync/build/intermediates/exploded-aar/SmartSyncTest.libs/SalesforceSDK/unspecified/res/xml/app_restrictions.xml"
+    },
+    {
+        "merged": "/home/manager/sarath_user/SmartSyncTest/libs/SmartSync/build/intermediates/res/merged/release/xml/authenticator.xml",
+        "source": "/home/manager/sarath_user/SmartSyncTest/libs/SmartSync/build/intermediates/exploded-aar/SmartSyncTest.libs/SalesforceSDK/unspecified/res/xml/authenticator.xml"
+    },
+    {
+        "merged": "/home/manager/sarath_user/SmartSyncTest/libs/SmartSync/build/intermediates/res/merged/release/xml/servers.xml",
+        "source": "/home/manager/sarath_user/SmartSyncTest/libs/SmartSync/build/intermediates/exploded-aar/SmartSyncTest.libs/SalesforceSDK/unspecified/res/xml/servers.xml"
+    }
+]

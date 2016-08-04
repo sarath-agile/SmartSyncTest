@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/manager/sarath_user/SmartSyncTest/libs/SmartStore/build/intermediates/res/merged/debug/drawable-mdpi-v4/sf__ic_refresh_sync_anim0.png",
+        "source": "/home/manager/sarath_user/SmartSyncTest/libs/SmartStore/build/intermediates/exploded-aar/SmartSyncTest.libs/SalesforceSDK/unspecified/res/drawable-mdpi-v4/sf__ic_refresh_sync_anim0.png"
+    },
+    {
+        "merged": "/home/manager/sarath_user/SmartSyncTest/libs/SmartStore/build/intermediates/res/merged/debug/drawable-mdpi-v4/sf__icon.png",
+        "source": "/home/manager/sarath_user/SmartSyncTest/libs/SmartStore/build/intermediates/exploded-aar/SmartSyncTest.libs/SalesforceSDK/unspecified/res/drawable-mdpi-v4/sf__icon.png"
+    },
+    {
+        "merged": "/home/manager/sarath_user/SmartSyncTest/libs/SmartStore/build/intermediates/res/merged/debug/drawable-mdpi-v4/sf__highlight_glare.png",
+        "source": "/home/manager/sarath_user/SmartSyncTest/libs/SmartStore/build/intermediates/exploded-aar/SmartSyncTest.libs/SalesforceSDK/unspecified/res/drawable-mdpi-v4/sf__highlight_glare.png"
+    },
+    {
+        "merged": "/home/manager/sarath_user/SmartSyncTest/libs/SmartStore/build/intermediates/res/merged/debug/drawable-mdpi-v4/sf__edit_icon.png",
+        "source": "/home/manager/sarath_user/SmartSyncTest/libs/SmartStore/build/intermediates/exploded-aar/SmartSyncTest.libs/SalesforceSDK/unspecified/res/drawable-mdpi-v4/sf__edit_icon.png"
+    }
+]
