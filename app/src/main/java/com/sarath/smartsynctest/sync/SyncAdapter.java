@@ -12,7 +12,14 @@ import android.content.SyncResult;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.salesforce.androidsdk.smartstore.store.DBHelper;
+import com.salesforce.androidsdk.smartstore.store.SmartStore;
+import com.salesforce.androidsdk.smartsync.manager.SyncManager;
+import com.salesforce.androidsdk.smartsync.util.SyncState;
 import com.sarath.smartsynctest.StoreUtils;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * Handle the transfer of data between a server and an
@@ -36,9 +43,17 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
     public void onPerformSync(Account account, Bundle extras, String authority,
                               ContentProviderClient provider, SyncResult syncResult) {
         Log.d(getClass().getName(),"onPerformSync");
-        StoreUtils.clearSoup();
 
-        StoreUtils.insert();
-
+        if(extras.getBoolean("CLEAR_CACHE",false)){
+            DBHelper.getInstance(StoreUtils.getSmartStore().getDatabase()).clearMemoryCache();
+        }else {
+            StoreUtils.clearSoup();
+            try {
+                StoreUtils.getSmartStore().upsert(SyncState.SYNCS_SOUP,new JSONObject());
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            StoreUtils.insert();
+        }
     }
 }

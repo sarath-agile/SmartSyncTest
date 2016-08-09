@@ -28,11 +28,15 @@ package com.sarath.smartsynctest;
 
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.IBinder;
+import android.os.Messenger;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -46,6 +50,8 @@ import com.salesforce.androidsdk.rest.RestClient.AsyncRequestCallback;
 import com.salesforce.androidsdk.rest.RestRequest;
 import com.salesforce.androidsdk.rest.RestResponse;
 import com.salesforce.androidsdk.ui.SalesforceActivity;
+import com.sarath.smartsynctest.sync.SyncAdapter;
+import com.sarath.smartsynctest.sync.SyncService;
 
 import org.json.JSONArray;
 
@@ -58,9 +64,10 @@ import java.util.Locale;
  */
 public class MainActivity extends SalesforceActivity {
 
-    private RestClient client;
-    private ArrayAdapter<String> listAdapter;
     private ProgressDialog progressDialog;
+
+
+
 
     BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
@@ -84,6 +91,8 @@ public class MainActivity extends SalesforceActivity {
         }
     };
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -104,9 +113,6 @@ public class MainActivity extends SalesforceActivity {
 
     @Override
     public void onResume(RestClient client) {
-        // Keeping reference to rest client
-        this.client = client;
-
         // Show everything
         findViewById(R.id.root).setVisibility(View.VISIBLE);
     }
@@ -121,15 +127,6 @@ public class MainActivity extends SalesforceActivity {
     }
 
     /**
-     * Called when "Clear" button is clicked.
-     *
-     * @param v
-     */
-    public void onClearClick(View v) {
-        listAdapter.clear();
-    }
-
-    /**
      * Called when "Fetch Contacts" button is clicked
      *
      * @param v
@@ -141,8 +138,15 @@ public class MainActivity extends SalesforceActivity {
 
     private void reset() {
         StoreUtils.dropSoups();
-        StoreUtils.registerSoups();
         Bundle settingsBundle = new Bundle();
+        settingsBundle.putBoolean(ContentResolver.SYNC_EXTRAS_MANUAL, true);
+        settingsBundle.putBoolean(ContentResolver.SYNC_EXTRAS_EXPEDITED, true);
+        settingsBundle.putBoolean("CLEAR_CACHE", true);
+        ContentResolver.requestSync(StoreUtils.getAccount(), StoreUtils.AUTHORITY, settingsBundle);
+
+
+        StoreUtils.registerSoups();
+        settingsBundle = new Bundle();
         settingsBundle.putBoolean(ContentResolver.SYNC_EXTRAS_MANUAL, true);
         settingsBundle.putBoolean(ContentResolver.SYNC_EXTRAS_EXPEDITED, true);
         ContentResolver.requestSync(StoreUtils.getAccount(), StoreUtils.AUTHORITY, settingsBundle);
